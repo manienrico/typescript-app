@@ -1,5 +1,6 @@
 import React,{FC} from 'react';
 import './App.css';
+import { Person } from './components/Person';
 
 const App:FC = () => {
 
@@ -18,7 +19,7 @@ const App:FC = () => {
 
   return (
     <div className="App">
-     Hey
+     <Person name='Enrico' age={19} email='123@gmail.com' />
     </div>
   );
 }
