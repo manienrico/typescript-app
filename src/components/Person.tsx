@@ -1,15 +1,28 @@
 import {FC,ChangeEvent,useState} from 'react';
 
-interface Props {
+export enum HairColor {      //define a set of options
+  Blonde = "Your hair is blonde",
+  Brown = "Cool hair color",
+  Pink = "Wow, that's cool"
+}
+
+interface Props {     //define an object
     name: string;
     age: number;
     email: string;
     //getName: (name:string) => string;
+    hairColor?: HairColor;
 }
 
-export const Person:FC<Props> = ({name,age,email}) => {
+type NameType = "Pedro" | "Jack"
+
+
+
+export const Person:FC<Props> = ({name,age,email,hairColor}) => {
 
     const [country,setCountry] = useState<string | null>("")
+
+    const nameForType:NameType = "Jack"
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>)=>{
         setCountry(event.target.value)
@@ -26,7 +39,9 @@ export const Person:FC<Props> = ({name,age,email}) => {
        onChange={handleChange}
 
         />
+        <br/>
       {country}
+      <p>{hairColor}</p>
     </div>
   );
 }
