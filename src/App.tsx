@@ -19,7 +19,7 @@ const App:FC = () => {
 
   return (
     <div className="App">
-     <Person name='Enrico' age={19} email='123@gmail.com' hairColor={HairColor.Pink} />
+     <Person name='Enrico' age={19} email='123@gmail.com' />
     </div>
   );
 }

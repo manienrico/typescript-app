@@ -1,24 +1,24 @@
 import {FC,ChangeEvent,useState} from 'react';
-import  '../components/Enums'
-// export enum HairColor {      //define a set of options
-//   Blonde = "Your hair is blonde",
-//   Brown = "Cool hair color",
-//   Pink = "Wow, that's cool"
-// }
+
+export enum HairColor {      //define a set of options
+  Blonde = "Your hair is blonde",
+  Brown = "Cool hair color",
+  Pink = "Wow, that's cool"
+}
 
 interface Props {     //define an object
     name: string;
     age: number;
     email: string;
     //getName: (name:string) => string;
-    hairColor?: HairColor;
+    //hairColor?: HairColor;
 }
 
 type NameType = "Pedro" | "Jack"
 
 
 
-export const Person:FC<Props> = ({name,age,email,hairColor}) => {
+export const Person:FC<Props> = ({name,age,email}) => {
 
     const [country,setCountry] = useState<string | null>("")
 
@@ -41,7 +41,7 @@ export const Person:FC<Props> = ({name,age,email,hairColor}) => {
         />
         <br/>
       {country}
-      <p>{hairColor}</p>
+      {/* <p>{hairColor}</p> */}
     </div>
   );
 }
