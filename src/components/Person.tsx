@@ -1,10 +1,10 @@
 import {FC,ChangeEvent,useState} from 'react';
-
-export enum HairColor {      //define a set of options
-  Blonde = "Your hair is blonde",
-  Brown = "Cool hair color",
-  Pink = "Wow, that's cool"
-}
+import  '../components/Enums'
+// export enum HairColor {      //define a set of options
+//   Blonde = "Your hair is blonde",
+//   Brown = "Cool hair color",
+//   Pink = "Wow, that's cool"
+// }
 
 interface Props {     //define an object
     name: string;
